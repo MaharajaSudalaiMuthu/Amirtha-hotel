@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Rooms & Booking | Hotel Amirtha Kangeyam</title>
+    <meta name="description" content="Affordable budget rooms in Kangeyam. Book clean AC and Non-AC rooms at Hotel Amirtha."/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style>
+        body { font-family: 'Manrope', sans-serif; background-color: #161311; color: #eae1dd; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .btn-glow { background: linear-gradient(135deg, #ffb5a0 0%, #ff5722 100%); }
+        input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1); }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+    <nav class="fixed top-0 w-full z-50 bg-stone-950/80 backdrop-blur-xl shadow-2xl">
+        <div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+            <a href="index.html" class="text-2xl font-serif font-bold text-orange-500 tracking-tighter">Hotel Amirtha</a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-serif text-stone-300 hover:text-orange-200 uppercase tracking-widest text-sm" href="index.html">Home</a>
+                <a class="font-serif text-orange-400 border-b-2 border-orange-500 pb-1 uppercase tracking-widest text-sm" href="stay.html">Rooms</a>
+                <a class="font-serif text-stone-300 hover:text-orange-200 uppercase tracking-widest text-sm" href="dine.html">Restaurant</a>
+                <a class="font-serif text-stone-300 hover:text-orange-200 uppercase tracking-widest text-sm" href="events.html">Party Hall</a>
+                <a class="font-serif text-stone-300 hover:text-orange-200 uppercase tracking-widest text-sm" href="contact.html">Contact</a>
+            </div>
+            <a href="order.html" class="px-6 py-2 btn-glow text-on-primary-container font-bold rounded-DEFAULT text-sm uppercase">Order Online</a>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <section class="py-20 px-8 text-center bg-surface-container-low">
+            <h1 class="font-serif text-5xl font-bold mb-4">Comfortable Budget Rooms</h1>
+            <p class="text-on-surface-variant max-w-2xl mx-auto">Clean, safe, and affordable accommodation in the heart of Kangeyam city center.</p>
+        </section>
+
+        <section class="py-24 px-8 max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+            <!-- Standard Room -->
+            <div class="bg-surface-container-highest rounded-DEFAULT overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800" alt="Standard Room" class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <h3 class="font-serif text-2xl font-bold mb-4">Standard Non-AC Room</h3>
+                    <ul class="space-y-3 text-on-surface-variant mb-8">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">check</span> King Size Bed</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">check</span> Attached Bathroom</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">check</span> Daily Housekeeping</li>
+                    </ul>
+                    <a href="#booking-form" class="block text-center py-3 border border-primary text-primary rounded-DEFAULT font-bold hover:bg-primary hover:text-on-primary-container transition-all">Select Room</a>
+                </div>
+            </div>
+
+            <!-- Deluxe Room -->
+            <div class="bg-surface-container-highest rounded-DEFAULT overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800" alt="Deluxe Room" class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <h3 class="font-serif text-2xl font-bold mb-4">Deluxe AC Room</h3>
+                    <ul class="space-y-3 text-on-surface-variant mb-8">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">check</span> Premium Air Conditioning</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">check</span> LED Television</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">check</span> Hot Water 24/7</li>
+                    </ul>
+                    <a href="#booking-form" class="block text-center py-3 border border-primary text-primary rounded-DEFAULT font-bold hover:bg-primary hover:text-on-primary-container transition-all">Select Room</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking-form" class="py-24 px-8 bg-surface-container-low">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-serif text-4xl font-bold mb-4">Check Room Availability</h2>
+                    <p class="text-on-surface-variant">Fill the form below and we will confirm your booking via WhatsApp.</p>
+                </div>
+                <form onsubmit="handleBooking(event)" class="bg-surface-container-highest p-8 rounded-xl space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-xs font-bold uppercase tracking-wider">Your Name</label>
+                            <input required id="book_name" type="text" placeholder="Enter name" class="bg-surface-container-low border-stone-700 rounded-DEFAULT p-3">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-xs font-bold uppercase tracking-wider">Phone Number</label>
+                            <input required id="book_phone" type="tel" placeholder="Enter mobile" class="bg-surface-container-low border-stone-700 rounded-DEFAULT p-3">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-xs font-bold uppercase tracking-wider">Check-in</label>
+                            <input required id="book_checkin" type="date" class="bg-surface-container-low border-stone-700 rounded-DEFAULT p-3">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-xs font-bold uppercase tracking-wider">Check-out</label>
+                            <input required id="book_checkout" type="date" class="bg-surface-container-low border-stone-700 rounded-DEFAULT p-3">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xs font-bold uppercase tracking-wider">Room Type</label>
+                        <select id="book_type" class="bg-surface-container-low border-stone-700 rounded-DEFAULT p-3">
+                            <option value="Standard Non-AC">Standard Non-AC</option>
+                            <option value="Deluxe AC">Deluxe AC Room</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full btn-glow text-on-primary-container font-bold py-4 rounded-DEFAULT uppercase tracking-widest">Send Booking Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-stone-950 px-12 py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+            <div>
+                <div class="text-xl font-serif text-orange-500 mb-4">Hotel Amirtha</div>
+                <p class="text-stone-400 text-sm">Opposite Kangeyam Police Station, Kalimedu, Kangeyam - 638701</p>
+                <p class="text-stone-400 text-sm mt-2">Ph: +91 84384 35005</p>
+            </div>
+            <div class="flex gap-12">
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs uppercase font-bold text-stone-300">Quick Links</span>
+                    <a href="stay.html" class="text-stone-500 text-sm hover:text-stone-200">Rooms</a>
+                    <a href="dine.html" class="text-stone-500 text-sm hover:text-stone-200">Restaurant</a>
+                    <a href="contact.html" class="text-stone-500 text-sm hover:text-stone-200">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleBooking(e) {
+            e.preventDefault();
+            const name = document.getElementById('book_name').value;
+            const phone = document.getElementById('book_phone').value;
+            const checkin = document.getElementById('book_checkin').value;
+            const checkout = document.getElementById('book_checkout').value;
+            const type = document.getElementById('book_type').value;
+            
+            const msg = `Hello Hotel Amirtha, I'd like to book a room.%0A%0A*Details:*%0AName: ${name}%0APhone: ${phone}%0ACheck-in: ${checkin}%0ACheck-out: ${checkout}%0ARoom Type: ${type}`;
+            window.open(`https://wa.me/918438435005?text=${msg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
